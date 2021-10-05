@@ -11,7 +11,7 @@ const Counter = ({ counter, Plus, Minus, Division, Multiplication }) => {
       <div className='row'>
         <div className='col'>
           <p>number 1</p>
-          <input onChange={(e) => { number1 = e.target.value }} id='number1' type='number'></input>
+          <input onChange={(e) => { number1 = e.target.value }} defaultValue={number1} id='number1' type='number'></input>
           <p>number 2</p>
           <input onChange={(e) => { number2 = e.target.value }} id='number2' type='number'></input>
         </div>
