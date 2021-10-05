@@ -6,19 +6,19 @@ const CounterReducer = (state = initialState, action) => {
   switch (action.type) {
     case "PLUS":
       return {
-        counter: state.counter + 1
+        counter:Math.floor(action.a) + Math.floor(action.b)
       };
     case "MINUS":
       return {
-        counter: state.counter - 1
+        counter: Math.floor(action.a) - Math.floor(action.b)
       };
     case "Division":
       return {
-        counter: state.counter * state.counter
+        counter: Math.floor(action.a) / Math.floor(action.b)
       };
     case "Multiplication":
       return {
-        counter: state.counter = 0
+        counter: Math.floor(action.a) * Math.floor(action.b)
       };
     default:
       return state;

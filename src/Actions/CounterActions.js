@@ -1,24 +1,32 @@
-export const Plus = () => {
+export const Plus = (a,b) => {
   return {
-    type: "PLUS"
+    type: "PLUS",
+    a:a,
+    b:b
   };
 };
 
-export const Minus = () => {
+export const Minus = (a,b) => {
   return {
-    type: "MINUS"
+    type: "MINUS",
+    a:a,
+    b:b
   };
 };
 
-export const Division = () => {
+export const Division = (a,b) => {
   return {
-    type: "Division"
+    type: "Division",
+    a:a,
+    b:b
   };
 };
 
-export const Multiplication = () => {
+export const Multiplication = (a,b) => {
   return {
-    type: "Multiplication"
+    type: "Multiplication",
+    a:a,
+    b:b
   };
 };
 
