@@ -5,14 +5,15 @@ import { Plus, Minus, Division, Multiplication} from "../../Actions/CounterActio
 import "./Counter.css";
 
 const Counter = ({ counter, Plus, Minus, Division, Multiplication }) => {
+  let number1 , number2
   return (
     <div className="container">
       <div className='row'>
         <div className='col'>
           <p>number 1</p>
-          <input id='number1' type='number'></input>
+          <input onChange={(e)=>{number1=e.target.value}} id='number1' type='number'></input>
           <p>number 2</p>
-          <input id='number2' type='number'></input>
+          <input onChange={(e)=>{number2=e.target.value}} id='number2' type='number'></input>
         </div>
       </div>
       <div className="row">
@@ -56,8 +57,8 @@ const Counter = ({ counter, Plus, Minus, Division, Multiplication }) => {
       </div>
     </div>
   );
+  
 };
-
 const mapStateToProps = ({ CounterReducer }) => {
   console.log("mapStateToProps ", CounterReducer);
   const { counter } = CounterReducer;
