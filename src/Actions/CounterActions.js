@@ -10,21 +10,15 @@ export const Minus = () => {
   };
 };
 
-export const ML = () => {
+export const Division = () => {
   return {
-    type: "ML"
+    type: "Division"
   };
 };
 
-export const ZERO = () => {
+export const Multiplication = () => {
   return {
-    type: "ZERO"
+    type: "Multiplication"
   };
 };
 
-export const PlusFive = number => {
-  return {
-    type: "PLUS_FIVE",
-    payload: number
-  };
-};

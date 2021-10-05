@@ -12,17 +12,13 @@ const CounterReducer = (state = initialState, action) => {
       return {
         counter: state.counter - 1
       };
-    case "ML":
+    case "Division":
       return {
         counter: state.counter * state.counter
       };
-      case "ZERO":
-        return {
-          counter: state.counter = 0
-        };
-    case "PLUS_FIVE":
+    case "Multiplication":
       return {
-        counter: state.counter / action.payload
+        counter: state.counter = 0
       };
     default:
       return state;

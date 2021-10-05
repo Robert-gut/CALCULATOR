@@ -1,15 +1,23 @@
 // Conntext react to store
 import { connect } from "react-redux";
-import { Plus, Minus, PlusFive, ML ,ZERO} from "../../Actions/CounterActions";
+import { Plus, Minus, Division, Multiplication} from "../../Actions/CounterActions";
 
 import "./Counter.css";
 
-const Counter = ({ counter, Plus, Minus, PlusFive, ML ,ZERO }) => {
+const Counter = ({ counter, Plus, Minus, Division, Multiplication }) => {
   return (
     <div className="container">
+      <div className='row'>
+        <div className='col'>
+          <p>number 1</p>
+          <input id='number1' type='number'></input>
+          <p>number 2</p>
+          <input id='number2' type='number'></input>
+        </div>
+      </div>
       <div className="row">
-        <div className="col center">
-          <span className="counter">{counter}</span>
+        <div className="col">
+        <p>+ - / *</p>
           <button
             type="button"
             className="btn btn-success operators"
@@ -27,22 +35,23 @@ const Counter = ({ counter, Plus, Minus, PlusFive, ML ,ZERO }) => {
           <button
             type="button"
             className="btn btn-warning operators"
-            onClick={ML}
+            onClick={Division}
           >
-            *num
+            /
           </button>
           <button
             type="button"
             className="btn btn-warning operators"
-            onClick={ZERO}
+            onClick={Multiplication}
           >
-            0
+            *
           </button>
-          <button type="button"
-            className="btn btn-danger operators"
-            onClick={() => PlusFive(2)}>
-            /2
-          </button>
+          <div className='row'>
+            <div className='col'>
+              <p>result</p>
+              <span className="counter">{counter}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -58,9 +67,8 @@ const mapStateToProps = ({ CounterReducer }) => {
 const mapDispatchToProps = {
   Plus,
   Minus,
-  PlusFive,
-  ML,
-  ZERO
+  Division,
+  Multiplication
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

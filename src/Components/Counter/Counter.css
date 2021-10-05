@@ -1,5 +1,6 @@
 .center {
   text-align: center;
+  border: 3px solid black;
 }
 .counter {
   font-size: 24px;
@@ -8,4 +9,10 @@
 }
 .operators {
   margin-right: 10px;
+}
+#number1, #number2{
+  width: 80px;
+}
+p{
+  margin: 0;
 }
