@@ -6,23 +6,22 @@ const CounterReducer = (state = initialState, action) => {
   switch (action.type) {
     case "PLUS":
       return {
-        counter:+action.a + +action.b
+        counter: +action.a + +action.b
       };
-    case "MINUS":
-      return {
+      case "MINUS":
+        return {
         counter: +action.a - +action.b
       };
-    case "Division":
-      return {
-        counter: +action.a / +action.b
-      };
-    case "Multiplication":
-      return {
-        counter: +action.a * +action.b
-      };
-    default:
-      return state;
+      case "Division":
+        return {
+          counter: +action.a / +action.b
+        };
+      case "Multiplication":
+        return {
+          counter: +action.a * +action.b
+        };
+      default:
+        return state;
   }
 };
-
 export default CounterReducer;
